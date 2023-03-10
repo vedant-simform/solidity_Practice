@@ -93,3 +93,9 @@ contract modifiers{
     }
 }
 
+contract manage{
+    event getETH(address _to, uint256 value);
+    function checkEvent() payable public {
+        emit getETH(msg.sender,msg.value);
+    }
+}
